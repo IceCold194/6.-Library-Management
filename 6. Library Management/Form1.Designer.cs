@@ -105,6 +105,7 @@
             this.buttonShow.TabIndex = 8;
             this.buttonShow.Text = "Show Book Details";
             this.buttonShow.UseVisualStyleBackColor = true;
+            this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
             // Form1
             // 

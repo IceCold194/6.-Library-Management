@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,13 @@ namespace _6.Library_Management
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void buttonShow_Click(object sender, EventArgs e)
+        {
+            Book myBook = new ReferenceBook(textBoxTitle.Text, textBoxAuthor.Text, textBoxSubject.Text);
+
+            MessageBox.Show(myBook.ShowDetails(), "Book Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
